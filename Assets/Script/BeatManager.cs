@@ -6,7 +6,7 @@ public class BeatManager : MonoBehaviour
     public float bpm = 120f;
     public float timingWindow = 0.15f; // ช่วงเวลากดติด (วินาที)
 
-    private float beatInterval;
+	private float beatInterval;
     private float nextBeatTime;
     private bool hasInputThisBeat = false;
 
@@ -23,8 +23,9 @@ public class BeatManager : MonoBehaviour
         {
             if (!hasInputThisBeat)
             {
-                Debug.Log("<color=red>[MISS] </color>");
-            }
+				Debug.Log("<color=red>[MISS] </color>");
+		
+			}
 
             nextBeatTime += beatInterval;
             hasInputThisBeat = false;
@@ -45,10 +46,12 @@ public class BeatManager : MonoBehaviour
             if (minDiff <= timingWindow)
             {
                 Debug.Log("<color=green>[PERFECT PARRY] </color>");
+       
             }
             else
             {
                 Debug.Log("<color=red>[MISS] </color>");
+
             }
         }
     }
